@@ -1,11 +1,11 @@
 import Counter from "@/components/counter";
 import GenericCounter from "@/components/genericCounter";
+import Notifier from "@/components/notifier";
 import SkillSet from "@/components/skillSet";
 
 export default function TestPage(){
     return (
         <div>
-            <p className="text-lg font-bold">Experimenting useState hook</p>
             <div>
                 <p>Simple counter</p>
                 <Counter className=""></Counter>
@@ -18,6 +18,9 @@ export default function TestPage(){
             </div>
             <div>
                 <SkillSet></SkillSet>
+            </div>
+            <div>
+                <Notifier></Notifier>
             </div>
             
         </div>
