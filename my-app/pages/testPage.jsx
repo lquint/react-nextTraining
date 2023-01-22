@@ -1,7 +1,10 @@
+import AutoCounter from "@/components/autoCounter";
 import Counter from "@/components/counter";
 import GenericCounter from "@/components/genericCounter";
 import Notifier from "@/components/notifier";
 import SkillSet from "@/components/skillSet";
+import ToDoList from "@/components/toDoList";
+import ToggleCounter from "@/components/toggleCounter";
 
 export default function TestPage() {
   return (
@@ -22,6 +25,13 @@ export default function TestPage() {
       <div>
         <Notifier></Notifier>
       </div>
+      <div>
+        <ToggleCounter/>
+      </div>
+      <div>
+        <AutoCounter/>
+      </div>
+      <ToDoList/>
     </div>
   );
 }
