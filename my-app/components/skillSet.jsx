@@ -13,16 +13,16 @@ const SkillSet = () => {
   return (
     <div>
       <form onSubmit={submitSkill}>
-        <label for="name">Enter your name: </label>
+        <label>Enter a skill: </label>
         <input
-          className="border mx-2"
+          className="mx-2 border"
           type="text"
           value={input}
           onInput={(e) => setInput(e.target.value)}
           required
         />
         <input
-          className="border mx-2 px-2 rounded-md bg-gray-400"
+          className="px-2 mx-2 bg-gray-400 border rounded-md"
           type="submit"
           value="Add"
         ></input>
