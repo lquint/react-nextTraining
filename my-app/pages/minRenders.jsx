@@ -1,6 +1,10 @@
 import CallbackCounter from "@/components/callbackCounter";
-import ColoredCounter from "@/components/coloredCounter";
 import MemoCounter from "@/components/memoCounter";
+import dynamic from 'next/dynamic'
+const ColoredCounter = dynamic(
+    () => import('../components/coloredCounter'),
+    { ssr: false }
+)
 
 export default function MinRenders(){
     return(
