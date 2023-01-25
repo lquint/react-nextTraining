@@ -8,7 +8,7 @@ const Counter = () => {
   }
   return (
     <>
-      <button onClick={handleClick} className="bg-slate-300 rounded-md m-4 p-1">
+      <button onClick={handleClick} className="p-1 m-4 rounded-md bg-slate-300">
         Count : {count}
       </button>
     </>
