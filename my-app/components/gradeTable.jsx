@@ -8,12 +8,12 @@ const GradeTable = () => {
 
     useEffect(function(){
         (async function(){
-            const response=await fetch("/api/grades")
-            const responseData = await response.json();
-            if (response.ok) {
+            try{
+                const response=await fetch("/api/grades")
+                const responseData = await response.json();
                 setGrades(responseData.grades.sort((a,b)=>{return a.class.localeCompare(b.class)}));
-            } else {
-                alert(JSON.stringify(responseData));
+            } catch(error){
+                console.log("There was an error fetching data", error)
             }
             setLoading(false);  
         })()
