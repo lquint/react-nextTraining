@@ -26,8 +26,8 @@ const ToDoList = () => {
         <p>Loading list ...</p>
       ) : (
         <ul className="ml-8 list-decimal">
-          {todos.map((t) => (
-            <li>{t.title}</li>
+          {todos.map((t,index) => (
+            <li key={index}>{t.title}</li>
           ))}
         </ul>
       )}
