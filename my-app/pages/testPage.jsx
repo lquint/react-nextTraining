@@ -1,12 +1,23 @@
 import AutoCounter from "@/components/autoCounter";
-import Calculator from "@/components/calculator";
+//import Calculator from "@/components/calculator";
 import Counter from "@/components/counter";
+import dynamic from 'next/dynamic'
+//import ErrorBoundary from "@/components/errorBoundary";
 import GenericCounter from "@/components/genericCounter";
 import Notifier from "@/components/notifier";
 import RefForm from "@/components/refForm";
 import SkillSet from "@/components/skillSet";
 import ToDoList from "@/components/toDoList";
 import ToggleCounter from "@/components/toggleCounter";
+const ErrorBoundary = dynamic(
+  () => import('../components/ErrorBoundary'),
+  { ssr: false }
+)
+const Calculator = dynamic(
+  () => import('../components/Calculator'),
+  { ssr: false }
+)
+
 
 export default function TestPage() {
   return (
@@ -35,7 +46,9 @@ export default function TestPage() {
       </div>
       <ToDoList/>
       <RefForm></RefForm>
-      <Calculator n={1}/>
+      <ErrorBoundary>
+        <Calculator n={1}/>
+      </ErrorBoundary>
     </div>
   );
 }
