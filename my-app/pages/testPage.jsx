@@ -1,4 +1,5 @@
 import AutoCounter from "@/components/autoCounter";
+import Calculator from "@/components/calculator";
 import Counter from "@/components/counter";
 import GenericCounter from "@/components/genericCounter";
 import Notifier from "@/components/notifier";
@@ -34,6 +35,7 @@ export default function TestPage() {
       </div>
       <ToDoList/>
       <RefForm></RefForm>
+      <Calculator n={1}/>
     </div>
   );
 }
